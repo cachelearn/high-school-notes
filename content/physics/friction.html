@@ -1,0 +1,131 @@
+<h1>Friction</h1>
+
+
+<h2>1. Types of Friction</h2>
+<table>
+  <tr><th>Type</th><th>When</th><th>Formula</th></tr>
+  <tr><td>Static friction $f_s$</td><td>Body at rest, tendency to move</td><td>$f_s \le \mu_s N$ (self-adjusting)</td></tr>
+  <tr><td>Limiting friction</td><td>Just about to move</td><td>$f_{s,max} = \mu_s N$</td></tr>
+  <tr><td>Kinetic friction $f_k$</td><td>Body already sliding</td><td>$f_k = \mu_k N$ (constant)</td></tr>
+  <tr><td>Rolling friction</td><td>Body rolling</td><td>Much smaller than $f_k$</td></tr>
+</table>
+<p>Always: $\mu_s > \mu_k > \mu_{rolling}$</p>
+<div class="note">
+  <strong>Critical Point:</strong> Static friction is self-adjusting. It equals $\mu_s N$ <em>only</em> at the point of slipping. Before that it equals whatever force is needed to maintain equilibrium. This is the most commonly misunderstood fact in friction.
+</div>
+
+
+<h2>2. Laws of Friction</h2>
+<ul>
+  <li>Friction $\propto$ Normal force $N$</li>
+  <li>Independent of area of contact</li>
+  <li>Kinetic friction independent of speed</li>
+  <li>Always opposes <em>relative motion</em> or tendency of it</li>
+</ul>
+
+
+<h2>3. Angle of Friction &amp; Angle of Repose</h2>
+
+
+<img src="../../assets/img/angle_friction.png" alt="Angle of friction" style="max-width:300px;display:block;margin:10px 0;border-radius:6px;">
+<p>$$\tan\lambda = \mu \qquad \text{(angle of friction)}$$</p>
+<p>$$\tan\theta_r = \mu_s \qquad \text{(angle of repose = angle of friction)}$$</p>
+<p>At $\theta > \theta_r$ the block slides; at $\theta = \theta_r$ it is on the verge of sliding.</p>
+
+
+<h2>4. Block on Inclined Plane</h2>
+
+
+<img src="../../assets/img/friction_incline.svg" alt="Block on rough incline" style="max-width:340px;display:block;margin:10px 0;border-radius:6px;">
+<table>
+  <tr><th>Condition</th><th>Formula</th></tr>
+  <tr><td>Normal force</td><td>$N = mg\cos\theta$</td></tr>
+  <tr><td>Sliding down (friction up the slope)</td><td>$a = g(\sin\theta - \mu_k\cos\theta)$</td></tr>
+  <tr><td>Pushed up (friction down the slope)</td><td>$a = g(\sin\theta + \mu_k\cos\theta)$</td></tr>
+  <tr><td>Just about to slide</td><td>$\tan\theta = \mu_s$</td></tr>
+</table>
+<div class="example">
+  <strong>Example:</strong> 5 kg block on $30°$ incline, $\mu_k=0.3$, sliding down.<br>
+  $a = 10(0.5 - 0.3\times0.866) = 10(0.5-0.26) = \mathbf{2.4\ \text{m/s}^2}$
+</div>
+
+
+<h2>5. Two-Block Slipping Condition</h2>
+
+
+<img src="../../assets/img/two_block_friction.svg" alt="Two block friction" style="max-width:340px;display:block;margin:10px 0;border-radius:6px;">
+<p>Block $m$ on top of block $M$, force $F$ on $m$, $\mu$ between them, smooth floor.</p>
+<ol>
+  <li>Assume they move together: $a = F/(m+M)$</li>
+  <li>Friction required on $m$: $f = ma$</li>
+  <li>If $f \le \mu mg$ → they move together ✓</li>
+  <li>If $f > \mu mg$ → they slip. Use $f = \mu mg$, write separate equations.</li>
+</ol>
+<div class="note"><strong>JEE Angle:</strong> This "check slipping" method is the most tested friction concept. Always assume together first, then verify.</div>
+<div class="example">
+  <strong>Example:</strong> $m=2$ kg, $M=8$ kg, $\mu=0.3$, $F=15$ N.<br>
+  If together: $a=1.5$ m/s². Friction needed: $2\times1.5=3$ N. Max: $0.3\times2\times10=6$ N.<br>
+  $3 < 6$ → move together. $a = \mathbf{1.5\ \text{m/s}^2}$
+</div>
+
+
+<h2>6. Pulley System with Friction</h2>
+<p>$m_1$ on rough table ($\mu_k$), $m_2$ hanging. Moves if $m_2 > \mu_s m_1$.</p>
+<p>$$a = \frac{m_2 g - \mu_k m_1 g}{m_1+m_2}, \qquad T = \frac{m_1 m_2 g(1+\mu_k)}{m_1+m_2}$$</p>
+
+
+<h2>7. Minimum Force to Move a Block</h2>
+<p>Force $F$ at angle $\theta$ above horizontal. As $\theta$ increases, $N$ decreases → friction decreases, but horizontal component also decreases. Optimal angle:</p>
+<p>$$\theta_{opt} = \tan^{-1}(\mu) = \lambda \qquad \text{(angle of friction)}$$</p>
+<p>$$F_{min} = \frac{\mu mg}{\sqrt{1+\mu^2}}$$</p>
+
+
+<h2>8. Rolling Without Slipping</h2>
+<p>When a body rolls without slipping, the contact point has zero velocity relative to ground:</p>
+<p>$$v_{CM} = r\omega$$</p>
+<ul>
+  <li>Friction is <strong>static</strong> (not kinetic) — it does no work in pure rolling.</li>
+  <li>Static friction provides torque for angular acceleration.</li>
+  <li>On a smooth surface: a sphere/cylinder can slide but not roll (no torque).</li>
+</ul>
+<div class="note"><strong>JEE Angle:</strong> Rolling without slipping condition $v=r\omega$ is critical. On rough incline: $a = \frac{g\sin\theta}{1 + I/mr^2}$ (from rotation chapter).</div>
+
+
+<h2>9. Ladder Problem</h2>
+
+
+<img src="../../assets/img/ladder_friction.svg" alt="Ladder friction problem" style="max-width:300px;display:block;margin:10px 0;border-radius:6px;">
+<p>Ladder of mass $m$, length $L$, leaning at angle $\theta$ against smooth wall, rough floor ($\mu$).</p>
+<p>Conditions for equilibrium: $\sum F = 0$ and $\sum \tau = 0$</p>
+<p>Taking torques about base:</p>
+<p>$$N_w \cdot L\sin\theta = mg\cdot\frac{L}{2}\cos\theta \implies N_w = \frac{mg}{2\tan\theta}$$</p>
+<p>For not slipping: $f = N_w \le \mu N_f = \mu mg$</p>
+<p>$$\tan\theta \ge \frac{1}{2\mu} \qquad \text{(minimum angle for ladder not to slip)}$$</p>
+
+
+<h2>10. Work Done by Friction &amp; Heat</h2>
+<ul>
+  <li>Kinetic friction always does negative work on the sliding body.</li>
+  <li>Static friction can do positive, negative, or zero work.</li>
+  <li>Heat generated $=$ friction force $\times$ relative displacement between surfaces:</li>
+</ul>
+<p>$$Q = f_k \cdot s_{rel}$$</p>
+<div class="example">
+  <strong>Example:</strong> Block slides 4 m, $\mu_k=0.4$, $m=2$ kg.<br>
+  $Q = 0.4\times2\times10\times4 = \mathbf{32\ \text{J}}$
+</div>
+
+
+<h2>Quick Formula Sheet</h2>
+<table>
+  <tr><th>Concept</th><th>Formula</th></tr>
+  <tr><td>Max static friction</td><td>$\mu_s N$</td></tr>
+  <tr><td>Kinetic friction</td><td>$\mu_k N$ (constant)</td></tr>
+  <tr><td>Angle of repose</td><td>$\tan\theta_r = \mu_s$</td></tr>
+  <tr><td>Incline sliding down</td><td>$g(\sin\theta - \mu_k\cos\theta)$</td></tr>
+  <tr><td>Incline pushed up</td><td>$g(\sin\theta + \mu_k\cos\theta)$</td></tr>
+  <tr><td>Min force (optimal angle)</td><td>$\mu mg/\sqrt{1+\mu^2}$</td></tr>
+  <tr><td>Rolling condition</td><td>$v_{CM} = r\omega$</td></tr>
+  <tr><td>Ladder min angle</td><td>$\tan\theta \ge 1/(2\mu)$</td></tr>
+  <tr><td>Heat generated</td><td>$\mu_k N \cdot s_{rel}$</td></tr>
+</table>

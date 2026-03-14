@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340" width="500" height="340" font-family="Georgia,serif" font-size="15">
+  <!-- Ground -->
+  <line x1="20" y1="300" x2="480" y2="300" stroke="#000" stroke-width="2.5"/>
+  <!-- Incline -->
+  <polygon points="60,300 420,300 420,80" fill="none" stroke="#000" stroke-width="2"/>
+  <!-- Angle arc -->
+  <path d="M390,300 A30,30 0 0,0 367,278" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="368" y="298" font-style="italic">θ</text>
+  <!-- Block (rotated on incline) -->
+  <g transform="translate(260,190) rotate(-34)">
+    <rect x="-28" y="-22" width="56" height="44" fill="white" stroke="#000" stroke-width="2"/>
+  </g>
+  <!-- N arrow (perpendicular to incline, i.e. rotated 56deg from vertical) -->
+  <line x1="260" y1="190" x2="213" y2="142" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="195" y="133" font-style="italic">N</text>
+  <!-- mg arrow (straight down) -->
+  <line x1="260" y1="190" x2="260" y2="258" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="265" y="275" font-style="italic">mg</text>
+  <!-- fk arrow (up the slope) -->
+  <line x1="260" y1="190" x2="316" y2="152" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="320" y="147" font-style="italic">f</text><text x="330" y="152" font-size="11">k</text>
+  <!-- mg sinθ component (along slope, down) -->
+  <line x1="260" y1="190" x2="204" y2="228" stroke="#555" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrgray)"/>
+  <text x="170" y="240" font-size="13" fill="#555" font-style="italic">mg sinθ</text>
+  <!-- mg cosθ component (perp to slope, into surface) -->
+  <line x1="260" y1="190" x2="293" y2="242" stroke="#555" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrgray)"/>
+  <text x="296" y="258" font-size="13" fill="#555" font-style="italic">mg cosθ</text>
+  <!-- Arrowhead markers -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#000"/>
+    </marker>
+    <marker id="arrgray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+</svg>

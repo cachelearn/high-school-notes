@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" width="420" height="380" font-family="Georgia,serif" font-size="15">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#000"/>
+    </marker>
+  </defs>
+  <!-- Ground -->
+  <line x1="20" y1="330" x2="400" y2="330" stroke="#000" stroke-width="2.5"/>
+  <!-- Wall -->
+  <line x1="340" y1="20" x2="340" y2="330" stroke="#000" stroke-width="2.5"/>
+  <!-- Ladder -->
+  <line x1="110" y1="330" x2="340" y2="80" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+  <!-- Angle arc at base -->
+  <path d="M145,330 A40,40 0 0,0 128,298" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="152" y="316" font-style="italic">θ</text>
+  <!-- N_w: normal from wall (horizontal, pointing left) -->
+  <line x1="340" y1="80" x2="280" y2="80" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="345" y="78" font-size="14" font-style="italic">N<tspan font-size="11" dy="3">w</tspan></text>
+  <!-- N_f: normal from floor (vertical, pointing up) -->
+  <line x1="110" y1="330" x2="110" y2="265" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="85" y="260" font-size="14" font-style="italic">N<tspan font-size="11" dy="3">f</tspan></text>
+  <!-- f: friction at base (horizontal, pointing right toward wall) -->
+  <line x1="110" y1="330" x2="175" y2="330" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="115" y="352" font-style="italic">f</text>
+  <!-- W: weight at midpoint of ladder -->
+  <line x1="225" y1="205" x2="225" y2="268" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="230" y="283" font-style="italic">W</text>
+  <!-- midpoint dot -->
+  <circle cx="225" cy="205" r="3" fill="#000"/>
+</svg>

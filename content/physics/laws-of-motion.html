@@ -1,0 +1,179 @@
+<h1>Laws of Motion</h1>
+
+
+<h2>1. Newton's First Law (Law of Inertia)</h2>
+<p>A body continues in its state of rest or uniform motion in a straight line unless acted upon by a net external force.</p>
+<ul>
+  <li><strong>Inertia:</strong> Resistance of a body to change its state. Measured by mass.</li>
+  <li>No net force → no acceleration (but velocity can be non-zero).</li>
+  <li>Defines the concept of an <strong>inertial frame</strong> — a frame where this law holds.</li>
+</ul>
+<div class="note"><strong>JEE Angle:</strong> Used to identify pseudo forces in non-inertial frames, and to check if a system is in equilibrium.</div>
+
+
+<h2>2. Newton's Second Law</h2>
+<p>$$\vec{F}_{net} = m\vec{a} = \frac{d\vec{p}}{dt}$$</p>
+<ul>
+  <li>Force and acceleration are always in the <strong>same direction</strong>.</li>
+  <li>Apply component-wise: $F_x = ma_x$, $F_y = ma_y$.</li>
+  <li>SI unit of force: Newton (N) $=$ kg·m/s²</li>
+</ul>
+<div class="note"><strong>JEE Angle:</strong> Always draw a free body diagram (FBD). Apply $\sum F = ma$ along and perpendicular to motion separately.</div>
+<div class="example">
+  <strong>Example:</strong> A 5 kg block is pushed by 20 N right, 8 N left.<br>
+  $F_{net} = 12$ N → $a = 12/5 = \mathbf{2.4 \text{ m/s}^2}$
+</div>
+
+
+<h2>3. Newton's Third Law</h2>
+<p>For every action there is an equal and opposite reaction. Action-reaction pairs act on <strong>different bodies</strong> — they never cancel each other.</p>
+
+
+<h2>4. Free Body Diagram (FBD)</h2>
+<p>Isolate each body. Draw all forces acting <em>on</em> it: weight $mg$ downward, normal $N$ perpendicular to surface, tension $T$ along string away from body, applied forces and friction.</p>
+<div class="note"><strong>JEE Angle:</strong> Every multi-body problem needs separate FBDs. Write $F=ma$ for each body individually.</div>
+
+
+<h2>5. Standard Systems</h2>
+
+<h3>Two Blocks in Contact</h3>
+
+
+<img src="../../assets/img/two_blocks_contact.png" alt="Two blocks in contact" style="max-width:380px;display:block;margin:10px 0;border-radius:6px;">
+<p>$$a = \frac{F}{m_1+m_2}, \qquad N_{contact} = \frac{m_2 F}{m_1+m_2}$$</p>
+
+<h3>Atwood's Machine</h3>
+
+
+<img src="../../assets/img/atwood_machine.png" alt="Atwood's Machine" style="max-width:280px;display:block;margin:10px 0;border-radius:6px;">
+<p>Masses $m_1 > m_2$ over a frictionless pulley:</p>
+<p>$$a = \frac{(m_1-m_2)g}{m_1+m_2}, \qquad T = \frac{2m_1 m_2 g}{m_1+m_2}$$</p>
+
+<h3>Block on Frictionless Incline</h3>
+
+
+<img src="../../assets/img/block_incline.png" alt="Block on incline" style="max-width:320px;display:block;margin:10px 0;border-radius:6px;">
+<p>$$a = g\sin\theta, \qquad N = mg\cos\theta$$</p>
+
+<h3>Block on Table + Hanging Mass</h3>
+<p>$m_1$ on table, $m_2$ hanging:</p>
+<p>$$a = \frac{m_2 g}{m_1+m_2}, \qquad T = \frac{m_1 m_2 g}{m_1+m_2}$$</p>
+
+<div class="example">
+  <strong>Example:</strong> Atwood: $m_1=6$ kg, $m_2=4$ kg, $g=10$.<br>
+  $a = \frac{2\times10}{10} = \mathbf{2\ \text{m/s}^2}$, &nbsp; $T = \frac{2\times6\times4\times10}{10} = \mathbf{48\ \text{N}}$
+</div>
+
+
+<h2>6. Wedge Problems</h2>
+
+
+<img src="../../assets/img/wedge_problem.png" alt="Wedge problem" style="max-width:340px;display:block;margin:10px 0;border-radius:6px;">
+<p>A block of mass $m$ on a frictionless wedge of angle $\theta$, wedge accelerating at $a_0$ on a smooth floor.</p>
+<p><strong>From ground frame (inertial):</strong></p>
+<p>$$N\sin\theta = ma_{block,x}, \qquad N\cos\theta - mg = 0 \text{ (if no vertical acc.)}$$</p>
+<p><strong>From wedge frame (non-inertial) — add pseudo force $ma_0$ backward on block:</strong></p>
+<p>Along incline: $mg\sin\theta - ma_0\cos\theta = ma_{rel}$</p>
+<p>Perpendicular to incline: $N = mg\cos\theta + ma_0\sin\theta$</p>
+<p><strong>If block stays stationary relative to wedge</strong> (they move together):</p>
+<p>$$a_0 = g\tan\theta, \qquad N = \frac{mg}{\cos\theta}$$</p>
+<div class="note"><strong>JEE Angle:</strong> Wedge problems are one of the most common JEE mechanics questions. Always choose the easier frame — usually the wedge frame with pseudo force.</div>
+<div class="example">
+  <strong>Example:</strong> A wedge of angle $30°$ accelerates on a smooth floor. Find $a_0$ so the block doesn't slide.<br>
+  $a_0 = g\tan30° = 10/\sqrt{3} \approx \mathbf{5.77\ \text{m/s}^2}$
+</div>
+
+
+<h2>7. Non-Inertial Frames &amp; Pseudo Force</h2>
+<p>In a frame accelerating at $\vec{a}_0$, apply pseudo force $= -m\vec{a}_0$ on every body.</p>
+<table>
+  <tr><th>Situation</th><th>Apparent Weight</th></tr>
+  <tr><td>Lift accelerating up</td><td>$m(g+a)$</td></tr>
+  <tr><td>Lift accelerating down</td><td>$m(g-a)$</td></tr>
+  <tr><td>Free fall</td><td>$0$</td></tr>
+  <tr><td>Constant velocity</td><td>$mg$</td></tr>
+</table>
+
+
+<h2>8. System of Particles &amp; Centre of Mass</h2>
+<p>For a system of particles with total mass $M$:</p>
+<p>$$\vec{F}_{ext} = M\vec{a}_{CM}$$</p>
+<p>The centre of mass accelerates as if all external forces act on it. Internal forces cancel in pairs.</p>
+<h3>Key Applications</h3>
+<ul>
+  <li><strong>Explosion:</strong> No external force → $\vec{p}_{total}$ conserved → $v_{CM}$ unchanged.</li>
+  <li><strong>Recoil:</strong> Gun + bullet system: $0 = m_{bullet}v_{bullet} + m_{gun}v_{gun}$</li>
+  <li><strong>Multiple blocks:</strong> $a_{CM} = F_{ext}/(m_1+m_2+\cdots)$</li>
+  <li><strong>If no external force:</strong> CM moves at constant velocity (or stays at rest).</li>
+</ul>
+<div class="note"><strong>JEE Angle:</strong> Explosion and recoil problems are solved purely by momentum conservation. The CM doesn't move if there's no external force.</div>
+<div class="example">
+  <strong>Example:</strong> A 4 kg gun fires a 0.05 kg bullet at 300 m/s. Find recoil velocity.<br>
+  $0 = 0.05\times300 + 4\times v_{gun}$ → $v_{gun} = \mathbf{-3.75\ \text{m/s}}$
+</div>
+
+
+<h2>9. Variable Mass Systems</h2>
+<p>The safest approach for JEE — always start from first principles:</p>
+<p>$F_{ext} = \frac{dp}{dt} = \frac{d(Mv)}{dt}$</p>
+<p>The general form depends on whether mass is <em>entering</em> or <em>leaving</em> the system:</p>
+<table>
+  <tr><th>Case</th><th>Equation</th></tr>
+  <tr><td>Mass leaving (rocket, chain)</td><td>$F_{ext} = M\dfrac{dv}{dt} - v_{rel}\dfrac{dM}{dt}$</td></tr>
+  <tr><td>Mass entering (sand on belt)</td><td>$F_{ext} = M\dfrac{dv}{dt} + v_{rel}\dfrac{dM}{dt}$</td></tr>
+</table>
+<div class="note"><strong>Sign rule:</strong> $v_{rel}$ is the velocity of the mass being added/ejected <em>relative to the system</em>. Rather than memorising signs, derive case-by-case from $F = dp/dt$ — it's safer in exams.</div>
+<table>
+  <tr><th>System</th><th>Key relation</th></tr>
+  <tr><td>Sand falling on conveyor belt</td><td>Force to maintain speed: $F = v\dfrac{dm}{dt}$</td></tr>
+  <tr><td>Chain falling off table</td><td>At length $x$ hanging: $F_{net} = \lambda xg$, where $\lambda$ = mass/length</td></tr>
+  <tr><td>Rocket equation</td><td>$F_{thrust} = v_{exhaust}\dfrac{dM}{dt}$, &nbsp; $v = u\ln(M_0/M)$</td></tr>
+</table>
+<div class="note"><strong>JEE Angle:</strong> Conveyor belt and chain problems appear regularly. For conveyor belt: energy lost to friction $=$ KE given to sand (not all of $Fv$ goes to KE).</div>
+
+
+<h2>10. Impulse &amp; Momentum</h2>
+<p>$$\vec{J} = \vec{F}\cdot\Delta t = \Delta\vec{p}$$</p>
+<ul>
+  <li>Conservation of momentum: if $F_{ext}=0$, $\vec{p}$ is conserved.</li>
+  <li>Impulse = area under $F$-$t$ graph.</li>
+</ul>
+<div class="example">
+  <strong>Example:</strong> 0.1 kg ball hits wall at 10 m/s, rebounds at 8 m/s.<br>
+  $J = \Delta p = 0.1 \times (-8 - 10) = \mathbf{-1.8 \ \text{N s}}$
+</div>
+
+
+<h2>11. Constraint Relations</h2>
+<p>For inextensible strings, total string length is constant. Differentiate to relate accelerations.</p>
+<ul>
+  <li>Simple fixed pulley: $a_1 = a_2$</li>
+  <li>Movable pulley: $a_1 + a_2 = 2a_{pulley}$</li>
+</ul>
+<div class="example">
+  <strong>Example:</strong> Movable pulley — block A and block B connected via a movable pulley. Pulley moves at $a_p$.<br>
+  Constraint: $a_A + a_B = 2a_p$. If A is fixed: $a_B = 2a_p$. Tension in main rope $= 2T$ where $T$ is tension in each string segment.
+</div>
+
+
+<h2>12. Equilibrium &amp; Lami's Theorem</h2>
+<p>Equilibrium: $\sum\vec{F} = 0$. For 3 concurrent forces:</p>
+<p>$$\frac{F_1}{\sin\alpha} = \frac{F_2}{\sin\beta} = \frac{F_3}{\sin\gamma}$$</p>
+
+
+<h2>Quick Formula Sheet</h2>
+<table>
+  <tr><th>Concept</th><th>Formula</th></tr>
+  <tr><td>Newton's 2nd law</td><td>$F = ma = dp/dt$</td></tr>
+  <tr><td>Impulse</td><td>$J = F\Delta t = \Delta p$</td></tr>
+  <tr><td>Atwood acceleration</td><td>$(m_1-m_2)g/(m_1+m_2)$</td></tr>
+  <tr><td>Atwood tension</td><td>$2m_1m_2g/(m_1+m_2)$</td></tr>
+  <tr><td>Incline (no friction)</td><td>$a=g\sin\theta$, $N=mg\cos\theta$</td></tr>
+  <tr><td>Wedge (block stationary on it)</td><td>$a_0 = g\tan\theta$</td></tr>
+  <tr><td>Lift apparent weight (up)</td><td>$m(g+a)$</td></tr>
+  <tr><td>Lift apparent weight (down)</td><td>$m(g-a)$</td></tr>
+  <tr><td>System of particles</td><td>$F_{ext} = Ma_{CM}$</td></tr>
+  <tr><td>Rocket thrust</td><td>$v_{exhaust}\cdot dM/dt$</td></tr>
+  <tr><td>Recoil / explosion</td><td>$\sum p = 0$ (if $F_{ext}=0$)</td></tr>
+  <tr><td>Lami's theorem</td><td>$F_1/\sin\alpha = F_2/\sin\beta = F_3/\sin\gamma$</td></tr>
+</table>

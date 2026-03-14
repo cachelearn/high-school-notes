@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 340" width="420" height="340" font-family="Georgia,serif" font-size="15">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#000"/>
+    </marker>
+    <marker id="arrb" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1a6fba"/>
+    </marker>
+  </defs>
+  <!-- Banked road surface -->
+  <polygon points="80,280 340,280 380,180 120,180" fill="#f0f0f0" stroke="#000" stroke-width="2"/>
+  <!-- Angle theta at base left -->
+  <path d="M110,280 A35,35 0 0,0 97,248" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="116" y="268" font-style="italic">θ</text>
+  <!-- Car (simple rectangle on the slope) -->
+  <g transform="translate(230,215) rotate(-22)">
+    <rect x="-28" y="-16" width="56" height="32" fill="white" stroke="#000" stroke-width="2" rx="3"/>
+    <text x="0" y="6" text-anchor="middle" font-size="12">car</text>
+  </g>
+  <!-- N arrow (perpendicular to road, rotated) -->
+  <line x1="230" y1="215" x2="195" y2="143" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="182" y="133" font-style="italic">N</text>
+  <!-- mg arrow straight down -->
+  <line x1="230" y1="215" x2="230" y2="295" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="235" y="310" font-style="italic">mg</text>
+  <!-- N sinθ horizontal component (toward center, left) -->
+  <line x1="195" y1="143" x2="195" y2="215" stroke="#1a6fba" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="195" y1="143" x2="230" y2="143" stroke="#1a6fba" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="230" y1="143" x2="230" y2="215" stroke="#1a6fba" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- N sinθ label -->
+  <line x1="195" y1="143" x2="130" y2="143" stroke="#1a6fba" stroke-width="2" marker-end="url(#arrb)"/>
+  <text x="55" y="147" fill="#1a6fba" font-size="13" font-style="italic">N sinθ</text>
+  <text x="35" y="162" fill="#1a6fba" font-size="11">(centripetal)</text>
+  <!-- N cosθ label -->
+  <line x1="230" y1="143" x2="230" y2="90" stroke="#1a6fba" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="235" y="120" fill="#1a6fba" font-size="13" font-style="italic">N cosθ</text>
+</svg>

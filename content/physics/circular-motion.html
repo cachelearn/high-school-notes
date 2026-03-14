@@ -1,0 +1,140 @@
+<h1>Circular Motion</h1>
+
+
+<h2>1. Basic Quantities</h2>
+<table>
+  <tr><th>Quantity</th><th>Symbol</th><th>Formula</th><th>Unit</th></tr>
+  <tr><td>Angular displacement</td><td>$\theta$</td><td>arc/radius</td><td>rad</td></tr>
+  <tr><td>Angular velocity</td><td>$\omega$</td><td>$d\theta/dt = 2\pi f = 2\pi/T$</td><td>rad/s</td></tr>
+  <tr><td>Angular acceleration</td><td>$\alpha$</td><td>$d\omega/dt$</td><td>rad/s²</td></tr>
+  <tr><td>Linear speed</td><td>$v$</td><td>$v = r\omega$</td><td>m/s</td></tr>
+  <tr><td>Time period</td><td>$T$</td><td>$2\pi/\omega = 1/f$</td><td>s</td></tr>
+</table>
+
+
+<h2>2. Centripetal Acceleration &amp; Force</h2>
+<p>$$a_c = \frac{v^2}{r} = \omega^2 r, \qquad F_c = \frac{mv^2}{r} = m\omega^2 r$$</p>
+<div class="note">
+  <strong>Centripetal force is not a new force.</strong> It is the net resultant of real forces (tension, gravity, normal, friction) pointing toward the centre. Never add it as an extra force in FBD.
+</div>
+
+
+<h2>3. Radial &amp; Tangential Force Resolution</h2>
+<p>For any circular motion, always resolve forces into two directions:</p>
+<table>
+  <tr><th>Direction</th><th>Equation</th><th>Points toward</th></tr>
+  <tr><td>Radial (centripetal)</td><td>$\sum F_r = \dfrac{mv^2}{r} = m\omega^2 r$</td><td>Centre of circle</td></tr>
+  <tr><td>Tangential</td><td>$\sum F_t = ma_t = mr\alpha$</td><td>Along velocity direction</td></tr>
+</table>
+<div class="note"><strong>JEE Angle:</strong> A very common mistake is resolving forces only vertically and horizontally. Always set up your axes as radial (inward) and tangential (along motion) for circular motion problems. For example in vertical circle problems — at any angle $\theta$ from bottom, gravity has both a radial component ($mg\cos\phi$) and tangential component ($mg\sin\phi$) depending on the position.</div>
+
+<h2>4. Uniform vs Non-Uniform Circular Motion</h2>
+<table>
+  <tr><th></th><th>Uniform CM</th><th>Non-Uniform CM</th></tr>
+  <tr><td>Speed</td><td>Constant</td><td>Changes</td></tr>
+  <tr><td>$a_c$</td><td>$v^2/r$ inward</td><td>$v^2/r$ inward</td></tr>
+  <tr><td>$a_t$</td><td>0</td><td>$dv/dt = r\alpha$</td></tr>
+  <tr><td>$a_{net}$</td><td>$= a_c$</td><td>$\sqrt{a_c^2 + a_t^2}$</td></tr>
+  <tr><td>Work by $F_c$</td><td>0 (always)</td><td>0</td></tr>
+</table>
+<p>Angle of $a_{net}$ with radius: $\tan\phi = a_t/a_c$</p>
+
+
+<h2>4. Standard Circular Motion Systems</h2>
+
+<h3>Conical Pendulum</h3>
+
+
+<img src="../../assets/img/conical_pendulum.svg" alt="Conical pendulum" style="max-width:280px;display:block;margin:10px 0;border-radius:6px;">
+<p>$$T\cos\theta = mg, \quad T\sin\theta = \frac{mv^2}{r}, \quad r = L\sin\theta$$</p>
+<p>$$\omega = \sqrt{\frac{g}{L\cos\theta}}, \qquad T_{period} = 2\pi\sqrt{\frac{L\cos\theta}{g}}$$</p>
+
+<h3>Vertical Circle</h3>
+
+
+<img src="../../assets/img/vertical_circle.svg" alt="Vertical circle" style="max-width:300px;display:block;margin:10px 0;border-radius:6px;">
+<table>
+  <tr><th>Position</th><th>Tension</th><th>Min speed to complete loop</th></tr>
+  <tr><td>Bottom</td><td>$T_B = mg + mv_B^2/r$</td><td>$v_B \ge \sqrt{5gr}$</td></tr>
+  <tr><td>Top</td><td>$T_T = mv_T^2/r - mg$</td><td>$v_T \ge \sqrt{gr}$ (so $T_T \ge 0$)</td></tr>
+  <tr><td>Side</td><td>$T_S = mv_S^2/r$</td><td>—</td></tr>
+</table>
+<p>Energy conservation: $\frac{1}{2}mv_B^2 = \frac{1}{2}mv_T^2 + mg(2r)$</p>
+
+<h3>Vehicle on Flat Curved Road</h3>
+<p>Friction provides centripetal force: $v_{max} = \sqrt{\mu rg}$</p>
+
+<h3>Vehicle on Banked Road</h3>
+
+
+<img src="../../assets/img/banked_road.svg" alt="Banked road" style="max-width:340px;display:block;margin:10px 0;border-radius:6px;">
+<p>$$v_{ideal} = \sqrt{rg\tan\theta} \qquad \text{(no friction needed)}$$</p>
+<p>With friction:</p>
+<p>$$v_{max} = \sqrt{rg\cdot\frac{\tan\theta+\mu}{1-\mu\tan\theta}}, \qquad v_{min} = \sqrt{rg\cdot\frac{\tan\theta-\mu}{1+\mu\tan\theta}}$$</p>
+
+<div class="example">
+  <strong>Example:</strong> Banked road $\theta=30°$, $r=100$ m, $g=10$.<br>
+  $v_{ideal} = \sqrt{100\times10\times\tan30°} \approx \mathbf{24\ \text{m/s}}$
+</div>
+
+
+<h2>5. Three Cases of Vertical Circle</h2>
+<table>
+  <tr><th>Case</th><th>Condition on $v_B$</th><th>What happens</th></tr>
+  <tr><td>Complete loop</td><td>$v_B \ge \sqrt{5gr}$</td><td>Taut throughout</td></tr>
+  <tr><td>Slack in upper half</td><td>$\sqrt{2gr} &lt; v_B &lt; \sqrt{5gr}$</td><td>String goes slack above centre</td></tr>
+  <tr><td>Oscillates</td><td>$v_B \le \sqrt{2gr}$</td><td>Never reaches top</td></tr>
+</table>
+<div class="note"><strong>JEE Angle:</strong> The critical condition is $T=0$ at the top. The boundary $v_B = \sqrt{2gr}$ corresponds to the ball just reaching the horizontal level of the centre.</div>
+
+
+<h2>6. Centrifugal Force (Rotating Frame)</h2>
+<p>In the rotating frame, a pseudo force $mv^2/r$ acts <strong>outward</strong>. It is not real — exists only in the rotating frame.</p>
+
+
+<h2>7. Object on Rotating Platform / Table</h2>
+
+
+<img src="../../assets/img/rotating_platform.svg" alt="Rotating platform" style="max-width:300px;display:block;margin:10px 0;border-radius:6px;">
+<p>A block at radius $r$ on a rotating platform (angular velocity $\omega$). Friction provides centripetal force:</p>
+<p>$$f = m\omega^2 r \le \mu mg$$</p>
+<p><strong>Maximum radius before slipping:</strong></p>
+<p>$$r_{max} = \frac{\mu g}{\omega^2}$$</p>
+<p><strong>Maximum angular velocity for block to stay:</strong></p>
+<p>$$\omega_{max} = \sqrt{\frac{\mu g}{r}}$$</p>
+<div class="note"><strong>JEE Angle:</strong> "A coin is placed at radius $r$ on a rotating table — find max $\omega$ before it slides" is a very common JEE Main question.</div>
+<div class="example">
+  <strong>Example:</strong> Coin at $r=0.5$ m, $\mu=0.4$, $g=10$. Find max $\omega$.<br>
+  $\omega_{max} = \sqrt{0.4\times10/0.5} = \sqrt{8} \approx \mathbf{2.83\ \text{rad/s}}$
+</div>
+
+
+<h2>8. Motion in Vertical Cylinder (Death Well)</h2>
+<p>$$N = \frac{mv^2}{r}, \quad f = mg, \quad f \le \mu N \implies v_{min} = \sqrt{\frac{rg}{\mu}}$$</p>
+
+
+<h2>9. Angular Kinematics (Uniform $\alpha$)</h2>
+<table>
+  <tr><th>Linear</th><th>Angular</th></tr>
+  <tr><td>$v = u + at$</td><td>$\omega = \omega_0 + \alpha t$</td></tr>
+  <tr><td>$s = ut + \frac{1}{2}at^2$</td><td>$\theta = \omega_0 t + \frac{1}{2}\alpha t^2$</td></tr>
+  <tr><td>$v^2 = u^2 + 2as$</td><td>$\omega^2 = \omega_0^2 + 2\alpha\theta$</td></tr>
+</table>
+
+
+<h2>Quick Formula Sheet</h2>
+<table>
+  <tr><th>Concept</th><th>Formula</th></tr>
+  <tr><td>Linear speed</td><td>$v = r\omega$</td></tr>
+  <tr><td>Centripetal acceleration</td><td>$v^2/r = \omega^2 r$</td></tr>
+  <tr><td>Centripetal force</td><td>$mv^2/r$</td></tr>
+  <tr><td>Net acceleration (non-uniform)</td><td>$\sqrt{a_c^2 + a_t^2}$</td></tr>
+  <tr><td>Conical pendulum $\omega$</td><td>$\sqrt{g/(L\cos\theta)}$</td></tr>
+  <tr><td>Vertical circle: $v_{top,min}$</td><td>$\sqrt{gr}$</td></tr>
+  <tr><td>Vertical circle: $v_{bottom,min}$</td><td>$\sqrt{5gr}$</td></tr>
+  <tr><td>Flat road max speed</td><td>$\sqrt{\mu rg}$</td></tr>
+  <tr><td>Banked road ideal speed</td><td>$\sqrt{rg\tan\theta}$</td></tr>
+  <tr><td>Rotating platform $r_{max}$</td><td>$\mu g/\omega^2$</td></tr>
+  <tr><td>Rotating platform $\omega_{max}$</td><td>$\sqrt{\mu g/r}$</td></tr>
+  <tr><td>Death well $v_{min}$</td><td>$\sqrt{rg/\mu}$</td></tr>
+</table>

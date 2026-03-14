@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380" width="380" height="380" font-family="Georgia,serif" font-size="15">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#000"/>
+    </marker>
+  </defs>
+  <!-- Fixed support -->
+  <line x1="80" y1="30" x2="300" y2="30" stroke="#000" stroke-width="3"/>
+  <line x1="190" y1="30" x2="190" y2="55" stroke="#000" stroke-width="2"/>
+  <!-- Vertical dashed line from pivot -->
+  <line x1="190" y1="55" x2="190" y2="290" stroke="#aaa" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- String (L label) -->
+  <line x1="190" y1="55" x2="290" y2="255" stroke="#000" stroke-width="2"/>
+  <text x="248" y="148" font-style="italic">L</text>
+  <!-- Angle theta between string and vertical -->
+  <path d="M190,100 A50,50 0 0,1 213,120" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="200" y="118" font-style="italic">θ</text>
+  <!-- Ball -->
+  <circle cx="290" cy="255" r="14" fill="white" stroke="#000" stroke-width="2"/>
+  <!-- Horizontal circle (ellipse) -->
+  <ellipse cx="190" cy="255" rx="100" ry="22" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- r label -->
+  <line x1="190" y1="255" x2="290" y2="255" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="230" y="248" font-style="italic" fill="#555">r</text>
+  <!-- T arrow along string (from ball toward pivot) -->
+  <line x1="290" y1="255" x2="247" y2="178" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="252" y="170" font-style="italic">T</text>
+  <!-- mg arrow downward from ball -->
+  <line x1="290" y1="255" x2="290" y2="318" stroke="#000" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="296" y="333" font-style="italic">mg</text>
+  <!-- Centripetal arrow (horizontal, inward) -->
+  <line x1="290" y1="255" x2="224" y2="255" stroke="#000" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="188" y="244" font-size="12" fill="#333">centripetal</text>
+</svg>

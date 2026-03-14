@@ -1,0 +1,256 @@
+<h1>Sequences &amp; Series</h1>
+
+
+<h2>1. Basic Definitions</h2>
+<ul>
+  <li><strong>Sequence:</strong> An ordered list of numbers following a rule.</li>
+  <li><strong>Series:</strong> Sum of terms of a sequence.</li>
+  <li><strong>$T_n$:</strong> General term (formula for the $n$th term).</li>
+  <li><strong>$S_n$:</strong> Sum of first $n$ terms.</li>
+</ul>
+<p>$$T_n = S_n - S_{n-1} \quad (n \ge 2), \qquad T_1 = S_1$$</p>
+<div class="example">
+  <strong>Example:</strong> $S_n = 3n^2 + 2n$. Find $T_3$.<br>
+  $T_3 = S_3 - S_2 = 33 - 16 = \mathbf{17}$. &nbsp; Verify: $T_n = 6n-1$, $T_3 = 17$ ✓
+</div>
+
+
+<h2>2. Arithmetic Progression (AP)</h2>
+<p>Each term differs from the previous by constant <strong>common difference $d$</strong>.</p>
+<p>$$a,\; a+d,\; a+2d,\; \ldots$$</p>
+<table>
+  <tr><th>Item</th><th>Formula</th></tr>
+  <tr><td>$n$th term</td><td>$T_n = a + (n-1)d$</td></tr>
+  <tr><td>Sum of $n$ terms</td><td>$S_n = \dfrac{n}{2}[2a + (n-1)d] = \dfrac{n}{2}(a+l)$</td></tr>
+  <tr><td>$n$th term from end</td><td>$l - (n-1)d$</td></tr>
+</table>
+<h3>Properties</h3>
+<ul>
+  <li>$a, b, c$ in AP $\Rightarrow 2b = a + c$</li>
+  <li>3 terms in AP: take $a-d,\; a,\; a+d$ (sum $= 3a$)</li>
+  <li>4 terms in AP: take $a-3d,\; a-d,\; a+d,\; a+3d$ (sum $= 4a$)</li>
+  <li>If $S_n$ is quadratic in $n$ with no constant term, the series is an AP</li>
+</ul>
+<div class="note"><strong>JEE Angle:</strong> The ratio $S_n/S_n'$ trick — to find $T_n/T_n'$, replace $n$ with $(2n-1)$ in the ratio.</div>
+<div class="example">
+  <strong>Example:</strong> $S_{20} = 400$, $S_{40} = 1600$. Find $S_{10}$.<br>
+  $2a+19d = 40$, $2a+39d=80$ → $d=2, a=1$ → $S_{10} = 5(2+18) = \mathbf{100}$
+</div>
+
+
+<h2>3. Geometric Progression (GP)</h2>
+<p>Each term is the previous multiplied by constant <strong>common ratio $r$</strong>.</p>
+<p>$$a,\; ar,\; ar^2,\; ar^3,\; \ldots$$</p>
+<table>
+  <tr><th>Item</th><th>Formula</th></tr>
+  <tr><td>$n$th term</td><td>$T_n = ar^{n-1}$</td></tr>
+  <tr><td>Sum ($r \ne 1$)</td><td>$S_n = \dfrac{a(r^n - 1)}{r - 1}$</td></tr>
+  <tr><td>Sum ($r = 1$)</td><td>$S_n = na$</td></tr>
+  <tr><td>Sum to infinity</td><td>$S_\infty = \dfrac{a}{1-r}$, &nbsp; only when $-1 &lt; r &lt; 1$</td></tr>
+</table>
+<h3>Properties</h3>
+<ul>
+  <li>$a, b, c$ in GP $\Rightarrow b^2 = ac$</li>
+  <li>3 terms in GP: take $a/r,\; a,\; ar$ (product $= a^3$)</li>
+  <li>$\log$ of GP terms forms an AP</li>
+</ul>
+<div class="example">
+  <strong>Example:</strong> Express $0.\overline{23}$ as a fraction.<br>
+  $a = 23/100$, $r = 1/100$ → $S_\infty = \dfrac{23/100}{1-1/100} = \mathbf{\dfrac{23}{99}}$
+</div>
+
+
+<h2>4. Harmonic Progression (HP)</h2>
+<p>A sequence is in HP if the <strong>reciprocals of its terms form an AP</strong>.</p>
+<p>$$T_n^{HP} = \frac{1}{a + (n-1)d} \qquad \text{(where } a, d \text{ are from the reciprocal AP)}$$</p>
+<p>Harmonic Mean of $a$ and $b$: $\; HM = \dfrac{2ab}{a+b}$</p>
+<div class="note"><strong>JEE Angle:</strong> No direct sum formula — always convert to AP by taking reciprocals.</div>
+<div class="example">
+  <strong>Example:</strong> 4th term of HP: $1/2, 1/5, 1/8, \ldots$<br>
+  Reciprocals: $2, 5, 8, \ldots$ (AP, $d=3$) → $T_4 = 2+9 = 11$ → HP term $= \mathbf{1/11}$
+</div>
+
+
+<h2>5. AM, GM, HM — The Golden Inequality</h2>
+<p>For two positive numbers $a$ and $b$:</p>
+<p>$$AM = \frac{a+b}{2}, \qquad GM = \sqrt{ab}, \qquad HM = \frac{2ab}{a+b}$$</p>
+<p>$$AM \;\ge\; GM \;\ge\; HM$$</p>
+<p>Equality holds <strong>if and only if $a = b$</strong>. Also: $AM \times HM = GM^2$.</p>
+<div class="note"><strong>JEE Angle:</strong> Find min/max of expressions, or find two numbers given AM and GM.</div>
+<div class="example">
+  <strong>Example:</strong> AM $= 5$, GM $= 4$. Find the numbers.<br>
+  $a+b=10$, $ab=16$ → $(a-b)^2 = 100-64 = 36$ → $a=\mathbf{8}, b=\mathbf{2}$
+</div>
+<div class="example">
+  <strong>Min of $x + 1/x$</strong> for $x > 0$: By AM-GM, $\;\dfrac{x+1/x}{2} \ge 1$ → min $= \mathbf{2}$ at $x=1$
+</div>
+
+
+<h2>6. Arithmetic-Geometric Progression (AGP)</h2>
+<p>Terms are products of AP and GP terms: $\;a,\;(a+d)r,\;(a+2d)r^2,\;\ldots$</p>
+<div class="note">
+  <strong>Never memorise the formula — derive every time:</strong><br>
+  Write $S$, then write $rS$ (shifted), subtract $S - rS$, the result telescopes to a GP + one extra term. Solve.
+</div>
+<div class="example">
+  <strong>Example:</strong> $S = 1 + 2x + 3x^2 + \cdots$ (infinite, $|x|&lt;1$)<br>
+  $S - xS = 1 + x + x^2 + \cdots = \dfrac{1}{1-x}$<br>
+  $\Rightarrow S = \dfrac{1}{(1-x)^2}$
+</div>
+
+
+<h2>7. Special Series — Sum of Powers</h2>
+<p>$$\sum_{r=1}^n 1 = n \qquad \sum_{r=1}^n r = \frac{n(n+1)}{2}$$</p>
+<p>$$\sum_{r=1}^n r^2 = \frac{n(n+1)(2n+1)}{6} \qquad \sum_{r=1}^n r^3 = \left[\frac{n(n+1)}{2}\right]^2$$</p>
+<div class="note">$\sum r^3 = \left(\sum r\right)^2$ — this identity is a JEE favourite.</div>
+<ul>
+  <li>Sum of first $n$ odd numbers $= n^2$</li>
+  <li>Sum of first $n$ even numbers $= n(n+1)$</li>
+</ul>
+<div class="example">
+  <strong>Example:</strong> $1^2 + 2^2 + \cdots + 10^2 = \dfrac{10 \times 11 \times 21}{6} = \mathbf{385}$
+</div>
+
+
+<h2>8. Method of Differences</h2>
+<p>Used when $T_n$ is not obvious but the <strong>differences of consecutive terms</strong> form an AP or GP.</p>
+<ol>
+  <li>Write $T_1, T_2, T_3, \ldots$ and compute first differences.</li>
+  <li>If differences are in AP/GP, identify $T_n$ by summing the differences.</li>
+  <li>Then find $S_n = \sum T_n$ using standard formulas.</li>
+</ol>
+<div class="example">
+  <strong>Example:</strong> $1, 3, 7, 13, 21, \ldots$<br>
+  Differences: $2, 4, 6, 8, \ldots$ (AP) → $T_n = 1 + \sum_{k=1}^{n-1} 2k = n^2 - n + 1$
+</div>
+
+
+<h2>9. Telescoping Series</h2>
+<p>Write $T_n = f(n) - f(n+1)$ so most terms cancel in the sum.</p>
+<table>
+  <tr><th>Pattern</th><th>Split</th></tr>
+  <tr><td>$\dfrac{1}{n(n+1)}$</td><td>$\dfrac{1}{n} - \dfrac{1}{n+1}$</td></tr>
+  <tr><td>$\dfrac{1}{(2n-1)(2n+1)}$</td><td>$\dfrac{1}{2}\!\left(\dfrac{1}{2n-1} - \dfrac{1}{2n+1}\right)$</td></tr>
+</table>
+<div class="note"><strong>JEE Angle:</strong> Use partial fractions to split $T_n$, then telescope. Very standard technique.</div>
+<div class="example">
+  <strong>Example:</strong> $\dfrac{1}{1\cdot2} + \dfrac{1}{2\cdot3} + \cdots$ to $n$ terms.<br>
+  $T_n = \dfrac{1}{n} - \dfrac{1}{n+1}$ → telescopes → $S = 1 - \dfrac{1}{n+1} = \mathbf{\dfrac{n}{n+1}}$
+</div>
+
+
+<h2>10. $V_n$ Method</h2>
+<p>When $T_n$ is a product of $k$ terms in AP with common difference $d$:</p>
+<p>$$S_n = \frac{1}{(k+1)\,d}\left[V_{n+1} - V_1\right]$$</p>
+<p>where $V_r$ is the product of $k+1$ consecutive AP terms starting at $T_r$.</p>
+<div class="example">
+  <strong>Example:</strong> $\sum \dfrac{1}{n(n+1)(n+2)}$ → $k=3$, $d=1$<br>
+  $S_n = \dfrac{1}{2}\!\left[\dfrac{1}{1\cdot2} - \dfrac{1}{(n+1)(n+2)}\right]$
+</div>
+
+
+<h2>11. Infinite GP &amp; Convergence</h2>
+<p>$S_\infty = \dfrac{a}{1-r}$ &nbsp; only when $-1 &lt; r &lt; 1$. For $|r| \ge 1$, the series diverges.</p>
+<h3>Recurring Decimals</h3>
+<table>
+  <tr><th>Form</th><th>Fraction</th></tr>
+  <tr><td>$0.\overline{a}$</td><td>$a/9$</td></tr>
+  <tr><td>$0.a\overline{b}$</td><td>$(ab - a)/90$</td></tr>
+  <tr><td>$0.\overline{ab}$</td><td>$ab/99$</td></tr>
+</table>
+<div class="example">
+  <strong>Example:</strong> Sum of infinite GP is 3, sum of squares is also 3. Find the GP.<br>
+  $a/(1-r)=3$ and $a^2/(1-r^2)=3$ → $r=1/2$, $a=3/2$<br>
+  GP: $\mathbf{3/2,\; 3/4,\; 3/8,\; \ldots}$
+</div>
+
+
+<h2>12. Insertion of Means</h2>
+<table>
+  <tr><th>Type</th><th>Formula for $d$ or $r$</th><th>Useful Result</th></tr>
+  <tr><td>$n$ AM's between $a$ and $b$</td><td>$d = \dfrac{b-a}{n+1}$</td><td>Sum of $n$ AM's $= n\cdot\dfrac{a+b}{2}$</td></tr>
+  <tr><td>$n$ GM's between $a$ and $b$</td><td>$r = \left(\dfrac{b}{a}\right)^{1/(n+1)}$</td><td>Product of $n$ GM's $= (ab)^{n/2}$</td></tr>
+  <tr><td>$n$ HM's between $a$ and $b$</td><td colspan="2">Take reciprocals → insert $n$ AM's → take reciprocals back</td></tr>
+</table>
+<div class="example">
+  <strong>Example:</strong> Insert 3 AM's between 3 and 19.<br>
+  $d = (19-3)/4 = 4$ → Means: $\mathbf{7, 11, 15}$
+</div>
+
+
+<h2>13. Properties &amp; Key Tricks</h2>
+<h3>Ratio of Sums → Ratio of nth Terms</h3>
+<p>If $S_n/S_n' = f(n)/g(n)$, then $T_n/T_n' = f(2n-1)/g(2n-1)$.</p>
+<div class="example">
+  <strong>Example:</strong> $S_n/S_n' = (7n+1):(4n+27)$. Find $T_{11}/T_{11}'$.<br>
+  Replace $n$ with $2(11)-1=21$ → $(148):(111) = \mathbf{4:3}$
+</div>
+<h3>Other Tricks</h3>
+<ul>
+  <li>$S_n = An^2 + Bn$ (no constant) → series is AP, $T_n = A(2n-1)+B$</li>
+  <li>$S_n = Ar^n$ (exponential) → series is GP</li>
+  <li>Three numbers in AP and GP simultaneously → they must all be equal</li>
+  <li>$\log$ of GP terms forms AP; $\text{antilog}$ of AP terms forms GP</li>
+</ul>
+
+
+<h2>14. Miscellaneous</h2>
+<h3>Mixed Series</h3>
+<p>Break $\sum(ar^2 + br + c)$ into $a\sum r^2 + b\sum r + c\sum 1$ and apply standard formulas.</p>
+<div class="example">
+  <strong>Example:</strong> $\sum_{r=1}^n r(r+1) = \sum r^2 + \sum r = \dfrac{n(n+1)(2n+1)}{6} + \dfrac{n(n+1)}{2} = \dfrac{n(n+1)(n+2)}{3}$
+</div>
+<h3>Geometric Series with Negative Ratio</h3>
+<p>$1 - x + x^2 - x^3 + \cdots = \dfrac{1}{1+x}$ &nbsp; for $|x|&lt;1$</p>
+
+
+<h2>15. Binomial Coefficient Sums in Series</h2>
+<table>
+  <tr><th>Sum</th><th>Result</th></tr>
+  <tr><td>$\sum_{r=0}^n {^n}C_r$</td><td>$2^n$</td></tr>
+  <tr><td>$\sum_{r=0}^n r\cdot{^n}C_r$</td><td>$n\cdot 2^{n-1}$</td></tr>
+  <tr><td>$\sum_{r=0}^n \dfrac{{^n}C_r}{r+1}$</td><td>$\dfrac{2^{n+1}-1}{n+1}$</td></tr>
+  <tr><td>$\sum_{r=0}^n (-1)^r\cdot{^n}C_r$</td><td>$0$</td></tr>
+  <tr><td>$\sum_{r=0}^n ({^n}C_r)^2$</td><td>$^{2n}C_n$</td></tr>
+</table>
+<p><strong>Derivation of $\sum r\cdot{^n}C_r$:</strong> Use $r\cdot{^n}C_r = n\cdot{^{n-1}}C_{r-1}$, then sum $= n\cdot 2^{n-1}$.</p>
+<p><strong>Derivation of $\sum {^n}C_r/(r+1)$:</strong> Integrate $(1+x)^n$ from 0 to 1.</p>
+<div class="example">
+  <strong>Example:</strong> $1\cdot{^5}C_1 + 2\cdot{^5}C_2 + 3\cdot{^5}C_3 + 4\cdot{^5}C_4 + 5\cdot{^5}C_5$<br>
+  $= n\cdot 2^{n-1}$ at $n=5$ $= 5\times 16 = \mathbf{80}$
+</div>
+
+
+<h2>16. Differentiation &amp; Integration of Series</h2>
+<p><strong>Base (Geometric Series):</strong> $\;\dfrac{1}{1-x} = 1 + x + x^2 + \cdots, \quad |x|&lt;1$</p>
+<p><strong>Differentiate once:</strong> $\;\dfrac{1}{(1-x)^2} = 1 + 2x + 3x^2 + \cdots = \sum_{r=1}^\infty r\,x^{r-1}$</p>
+<p><strong>Multiply by $x$:</strong> $\;\dfrac{x}{(1-x)^2} = \sum_{r=1}^\infty r\,x^r$</p>
+<p><strong>Integrate base:</strong> $\;-\ln(1-x) = x + \dfrac{x^2}{2} + \dfrac{x^3}{3} + \cdots$</p>
+<p>$\;\ln(1+x) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \cdots$</p>
+<div class="note">
+  <strong>Strategy:</strong> If $T_n$ has $r$ or $r^2$ → differentiate the GP sum. If $T_n$ has $1/r$ → integrate. Substitute $x = 1/2$, $1/3$, etc. to evaluate.
+</div>
+<div class="example">
+  <strong>Example:</strong> $S = \dfrac{1}{2} + \dfrac{2}{4} + \dfrac{3}{8} + \cdots = \sum_{n=1}^\infty \dfrac{n}{2^n}$<br>
+  $= \sum n\,x^n$ at $x=\tfrac{1}{2}$ $= \dfrac{x}{(1-x)^2}\Big|_{x=1/2} = \dfrac{1/2}{1/4} = \mathbf{2}$
+</div>
+
+
+<h2>Quick Formula Sheet</h2>
+<table>
+  <tr><th>Concept</th><th>Formula</th></tr>
+  <tr><td>AP $n$th term</td><td>$a + (n-1)d$</td></tr>
+  <tr><td>AP Sum</td><td>$\dfrac{n}{2}[2a+(n-1)d]$</td></tr>
+  <tr><td>GP $n$th term</td><td>$ar^{n-1}$</td></tr>
+  <tr><td>GP Sum ($r\ne 1$)</td><td>$a(r^n-1)/(r-1)$</td></tr>
+  <tr><td>GP Infinite</td><td>$a/(1-r)$, &nbsp; $-1 &lt; r &lt; 1$</td></tr>
+  <tr><td>HP $n$th term</td><td>$1/[a+(n-1)d]$</td></tr>
+  <tr><td>AM, GM, HM</td><td>$(a+b)/2$, $\sqrt{ab}$, $2ab/(a+b)$</td></tr>
+  <tr><td>$\sum r$</td><td>$n(n+1)/2$</td></tr>
+  <tr><td>$\sum r^2$</td><td>$n(n+1)(2n+1)/6$</td></tr>
+  <tr><td>$\sum r^3$</td><td>$[n(n+1)/2]^2$</td></tr>
+  <tr><td>$\sum r\cdot{^n}C_r$</td><td>$n\cdot 2^{n-1}$</td></tr>
+  <tr><td>$\sum n\,x^n$</td><td>$x/(1-x)^2$</td></tr>
+  <tr><td>$n$ AMs: common diff</td><td>$(b-a)/(n+1)$</td></tr>
+  <tr><td>$n$ GMs: common ratio</td><td>$(b/a)^{1/(n+1)}$</td></tr>
+</table>

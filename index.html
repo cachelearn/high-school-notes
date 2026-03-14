@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JEE Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+    onload="initKatex()"></script>
+</head>
+<body>
+
+  
+  <header id="topbar">
+    <div id="topbar-left">
+      <button id="sidebar-toggle" onclick="toggleSidebar()" title="Toggle Sidebar">&#9776;</button>
+      <span id="site-title" onclick="goHome()">JEE Notes</span>
+    </div>
+    <nav id="breadcrumb"></nav>
+  </header>
+
+  <div id="layout">
+
+    
+    <aside id="sidebar">
+      <div id="sidebar-subject"></div>
+      <ul id="chapter-list"></ul>
+    </aside>
+
+    
+    <main id="main">
+
+      
+      <div id="home">
+        <h1>JEE Notes</h1>
+        <p class="home-sub">Choose a subject to get started.</p>
+        <div id="subject-cards">
+          <div class="subject-card" onclick="loadSubject('maths')">
+            <div class="card-icon">∑</div>
+            <div class="card-label">Mathematics</div>
+          </div>
+          <div class="subject-card" onclick="loadSubject('physics')">
+            <div class="card-icon">⚛</div>
+            <div class="card-label">Physics</div>
+          </div>
+          <div class="subject-card" onclick="loadSubject('chemistry')">
+            <div class="card-icon">⚗</div>
+            <div class="card-label">Chemistry</div>
+          </div>
+        </div>
+      </div>
+
+      
+      <article id="content" class="hidden"></article>
+
+      
+      <div id="chapter-nav" class="hidden">
+        <button id="btn-prev" onclick="navigateChapter(-1)">&#8592; Prev</button>
+        <button id="btn-next" onclick="navigateChapter(1)">Next &#8594;</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

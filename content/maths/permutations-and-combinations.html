@@ -1,0 +1,252 @@
+<h1>Permutations &amp; Combinations</h1>
+
+
+<h2>1. Fundamental Principle of Counting</h2>
+<p><strong>Multiplication Rule:</strong> If task A can be done in $m$ ways and task B in $n$ ways, together they can be done in $m \times n$ ways.</p>
+<p><strong>Addition Rule:</strong> If A <em>or</em> B (mutually exclusive), total $= m + n$ ways.</p>
+<div class="note"><strong>JEE Angle:</strong> Always identify whether tasks are done <em>together</em> (multiply) or <em>alternatively</em> (add). This underlies every P&amp;C problem.</div>
+<div class="example">
+  <strong>Example:</strong> How many 2-digit numbers can be formed using {1,2,3,4,5} without repetition?<br>
+  Tens place: 5 choices &nbsp;|&nbsp; Units place: 4 choices &nbsp;→&nbsp; $5 \times 4 = \mathbf{20}$
+</div>
+
+
+<h2>2. Factorial</h2>
+<p>$$n! = n \times (n-1) \times (n-2) \times \cdots \times 1, \qquad 0! = 1$$</p>
+<p>Key identity: $n! = n \times (n-1)!$ — used everywhere in P&amp;C.</p>
+
+
+<h2>3. Permutation — $^nP_r$</h2>
+<p>Arrangement of $r$ objects from $n$ distinct objects where <strong>order matters</strong>.</p>
+<p>$$^nP_r = \frac{n!}{(n-r)!}$$</p>
+<div class="note"><strong>JEE Angle:</strong> Words from letters, digits in numbers, rank of a word in dictionary.</div>
+<div class="example">
+  <strong>Example:</strong> How many 3-letter words from the letters of "MASTER"?<br>
+  $^6P_3 = 6 \times 5 \times 4 = \mathbf{120}$
+</div>
+
+
+<h2>4. Combination — $^nC_r$</h2>
+<p>Selection of $r$ objects from $n$ where <strong>order does NOT matter</strong>.</p>
+<p>$$^nC_r = \frac{n!}{r!\,(n-r)!}$$</p>
+<h3>Key Properties</h3>
+<ul>
+  <li>$^nC_r = {^n}C_{n-r}$</li>
+  <li>$^nC_r + {^n}C_{r-1} = {^{n+1}}C_r$ &nbsp; (Pascal's Identity)</li>
+  <li>$^nC_0 = {^n}C_n = 1$</li>
+  <li>$^nC_r = {^n}C_s \Rightarrow r = s$ or $r + s = n$</li>
+</ul>
+<div class="note"><strong>JEE Angle:</strong> Selection of teams/committees, handshakes, geometry (lines/triangles from points).</div>
+<div class="example">
+  <strong>Example:</strong> Committee of 3 from 5 men and 4 women with at least 1 woman.<br>
+  Total $-$ (no woman) $= {^9}C_3 - {^5}C_3 = 84 - 10 = \mathbf{74}$
+</div>
+
+
+<h2>5. Relation Between P and C</h2>
+<p>$$^nP_r = r! \times {^n}C_r$$</p>
+<p>Permutation = Selection × Arrangement. Use this to switch between the two.</p>
+
+
+<h2>6. Box &amp; Gap Method</h2>
+<ul>
+  <li><strong>Gap Method (no two together):</strong> Arrange the other objects first, then place restricted objects in the gaps created.</li>
+  <li><strong>Tie Method (must be together):</strong> Treat the group as a single unit, arrange, then arrange within the group.</li>
+</ul>
+<div class="note"><strong>JEE Angle:</strong> "No two vowels together", "all consonants together" — very frequently tested.</div>
+<div class="example">
+  <strong>Example:</strong> 4 boys and 3 girls in a row, no two girls adjacent.<br>
+  Arrange 4 boys: $4! = 24$ → 5 gaps created → place 3 girls: $^5P_3 = 60$<br>
+  Total $= 24 \times 60 = \mathbf{1440}$
+</div>
+
+
+<h2>7. Permutation of Alike Objects</h2>
+<p>When objects are not all distinct:</p>
+<p>$$\text{Arrangements} = \frac{n!}{p!\, q!\, r!\, \cdots}$$</p>
+<p>where $p, q, r, \ldots$ are frequencies of identical objects.</p>
+<div class="note"><strong>JEE Angle:</strong> Number of words from letters of a given word, arrangements with repeated elements.</div>
+<div class="example">
+  <strong>Example:</strong> Arrangements of "MISSISSIPPI" (11 letters: M×1, I×4, S×4, P×2)<br>
+  $$\frac{11!}{4!\,4!\,2!} = \mathbf{34650}$$
+</div>
+
+
+<h2>8. Circular Permutation</h2>
+<table>
+  <tr><th>Case</th><th>Formula</th></tr>
+  <tr><td>$n$ distinct objects in a circle</td><td>$(n-1)!$</td></tr>
+  <tr><td>Necklace / Keychain (flipping identical)</td><td>$\dfrac{(n-1)!}{2}$</td></tr>
+  <tr><td>Some people must sit together</td><td>Treat group as 1 unit → $(n-k)!$ × $k!$ arrangements inside</td></tr>
+</table>
+<div class="note"><strong>JEE Angle:</strong> People around a table, beads on a necklace, clockwise ≠ anticlockwise for table arrangements.</div>
+<div class="example">
+  <strong>Example:</strong> 6 people sit around a circular table.<br>
+  $(6-1)! = \mathbf{120}$
+</div>
+
+
+<h2>9. Total Number of Combinations</h2>
+<table>
+  <tr><th>Case</th><th>Formula</th></tr>
+  <tr><td>Select any number from $n$ distinct objects</td><td>$2^n$ (including empty)</td></tr>
+  <tr><td>Non-empty selections</td><td>$2^n - 1$</td></tr>
+  <tr><td>From groups of $p, q, r$ identical objects</td><td>$(p+1)(q+1)(r+1)\cdots$ (including empty)</td></tr>
+</table>
+<div class="note"><strong>JEE Angle:</strong> Number of divisors of a number, subsets, selections from mixed groups.</div>
+<div class="example">
+  <strong>Example:</strong> Total factors of $720 = 2^4 \times 3^2 \times 5^1$<br>
+  Factors $= (4+1)(2+1)(1+1) = \mathbf{30}$
+</div>
+
+
+<h2>10. Formation &amp; Distribution of Groups</h2>
+<table>
+  <tr><th>Scenario</th><th>Formula</th></tr>
+  <tr><td>$n$ objects into distinct groups of $p, q, r$</td><td>$\dfrac{n!}{p!\, q!\, r!}$</td></tr>
+  <tr><td>$n$ objects into identical groups of equal size $k$</td><td>$\dfrac{n!}{(k!)^m \cdot m!}$ where $m$ = number of groups</td></tr>
+  <tr><td>$n$ distinct objects into $r$ distinct boxes</td><td>$r^n$</td></tr>
+  <tr><td>At least 1 per box (distinct into distinct)</td><td>Inclusion-exclusion: $r^n - {^r}C_1(r-1)^n + {^r}C_2(r-2)^n - \cdots$</td></tr>
+</table>
+<div class="example">
+  <strong>Example:</strong> 12 students divided into 3 unlabelled groups of 4 each.<br>
+  $\dfrac{^{12}C_4 \times {^8}C_4 \times {^4}C_4}{3!} = \dfrac{495 \times 70 \times 1}{6} = \mathbf{5775}$
+</div>
+
+
+<h2>11. Stars &amp; Bars (Bagger's Method)</h2>
+<p>Distributing $n$ identical objects into $r$ distinct boxes:</p>
+<table>
+  <tr><th>Condition</th><th>Formula</th></tr>
+  <tr><td>0 or more per box</td><td>$^{n+r-1}C_{r-1}$</td></tr>
+  <tr><td>At least 1 per box</td><td>$^{n-1}C_{r-1}$</td></tr>
+</table>
+<div class="note"><strong>JEE Angle:</strong> Non-negative integer solutions to $x_1 + x_2 + \cdots + x_r = n$.</div>
+<div class="example">
+  <strong>Example:</strong> Non-negative integer solutions to $x + y + z = 10$.<br>
+  $^{10+3-1}C_{3-1} = {^{12}}C_2 = \mathbf{66}$
+</div>
+
+
+<h2>12. Permutations with Repetition</h2>
+<table>
+  <tr><th>Case</th><th>Formula</th></tr>
+  <tr><td>$r$-length arrangements from $n$, repetition allowed</td><td>$n^r$</td></tr>
+  <tr><td>$r$-length arrangements from $n$, no repetition</td><td>$^nP_r$</td></tr>
+</table>
+<div class="example">
+  <strong>Example:</strong> 3-digit numbers from {1,2,3,4,5}, repetition allowed.<br>
+  $5^3 = \mathbf{125}$ &nbsp;vs.&nbsp; without repetition: $5 \times 4 \times 3 = 60$
+</div>
+
+
+<h2>13. Number Formation &amp; Divisibility</h2>
+<div class="note"><strong>Key Rule:</strong> Always fix the constrained position first, then fill the rest.</div>
+<p><strong>When 0 is in the digit set</strong> — first digit cannot be 0, so treat it separately.</p>
+<div class="example">
+  <strong>Example:</strong> 4-digit numbers from {0,1,2,3,4}, no repetition.<br>
+  First digit: 4 choices (not 0) → remaining: $4 \times 3 \times 2 = 24$ → Total $= 4 \times 24 = \mathbf{96}$
+</div>
+<table>
+  <tr><th>Divisible by</th><th>Constraint</th></tr>
+  <tr><td>2</td><td>Last digit must be even</td></tr>
+  <tr><td>5</td><td>Last digit must be 0 or 5</td></tr>
+  <tr><td>3</td><td>Sum of digits divisible by 3 (use casework)</td></tr>
+  <tr><td>Greater than X</td><td>Fix leading digits, count remaining</td></tr>
+</table>
+<div class="example">
+  <strong>Example:</strong> 4-digit numbers from {1,2,3,4,5,6} (no repetition), divisible by 2.<br>
+  Last digit (even): 3 choices → remaining 3 positions: $5 \times 4 \times 3 = 60$ → Total $= 3 \times 60 = \mathbf{180}$
+</div>
+
+
+<h2>14. Combination Identities</h2>
+<table>
+  <tr><th>Identity</th><th>Result</th></tr>
+  <tr><td>$\sum_{r=0}^{n} {^n}C_r$</td><td>$2^n$</td></tr>
+  <tr><td>$^nC_0 + {^n}C_2 + {^n}C_4 + \cdots$</td><td>$2^{n-1}$</td></tr>
+  <tr><td>$^nC_1 + {^n}C_3 + {^n}C_5 + \cdots$</td><td>$2^{n-1}$</td></tr>
+  <tr><td>Pascal's Identity: $^nC_r + {^n}C_{r-1}$</td><td>$^{n+1}C_r$</td></tr>
+  <tr><td>$\sum_{r=0}^{n} r \cdot {^n}C_r$</td><td>$n \cdot 2^{n-1}$</td></tr>
+  <tr><td>Vandermonde: $\sum_k {^r}C_k \cdot {^s}C_{r-k}$</td><td>$^{r+s}C_r$</td></tr>
+</table>
+<div class="example">
+  <strong>Proof:</strong> $\sum {^n}C_r = 2^n$ — put $x=1$ in $(1+x)^n = \sum {^n}C_r x^r$ → $2^n$ ✓
+</div>
+
+
+<h2>15. Grid Path Counting</h2>
+<p>From $(0,0)$ to $(m,n)$ moving only right or up — need exactly $m$ rights and $n$ ups:</p>
+<p>$$\text{Total paths} = {^{m+n}}C_m = \frac{(m+n)!}{m!\, n!}$$</p>
+<p><strong>With obstacle at point $(a,b)$:</strong> subtract paths passing through it.</p>
+<div class="example">
+  <strong>Example:</strong> Paths from $(0,0)$ to $(4,3)$ with obstacle at $(2,1)$.<br>
+  Total $= {^7}C_4 = 35$<br>
+  Through $(2,1)$: ${^3}C_2 \times {^4}C_2 = 3 \times 6 = 18$<br>
+  Valid paths $= 35 - 18 = \mathbf{17}$
+</div>
+
+
+<h2>16. Miscellaneous</h2>
+
+<h3>Lines &amp; Triangles from Points</h3>
+<p>From $n$ points, no 3 collinear: &nbsp; Lines $= {^n}C_2$, &nbsp; Triangles $= {^n}C_3$</p>
+<p>If $m$ points are collinear (among $n$):</p>
+<p>$$\text{Lines} = {^n}C_2 - {^m}C_2 + 1 \qquad \text{Triangles} = {^n}C_3 - {^m}C_3$$</p>
+<div class="note">
+  Among the $m$ collinear points, $^mC_2$ pairs all lie on the <strong>same single line</strong> — so instead of $^mC_2$ lines we count just 1 (hence $-{^m}C_2 + 1$). Collinear points form <strong>no triangle</strong>, so subtract $^mC_3$.
+</div>
+<div class="example">
+  <strong>Example:</strong> 10 points, 4 collinear.<br>
+  Lines $= {^{10}}C_2 - {^4}C_2 + 1 = 45 - 6 + 1 = \mathbf{40}$<br>
+  Triangles $= {^{10}}C_3 - {^4}C_3 = 120 - 4 = \mathbf{116}$
+</div>
+
+<h3>Diagonals of a Polygon</h3>
+<p>In a polygon with $n$ sides, a diagonal connects two non-adjacent vertices.</p>
+<p>$\text{Diagonals} = {^n}C_2 - n = \frac{n(n-1)}{2} - n = \frac{n(n-3)}{2}$</p>
+<div class="note">$^nC_2$ = all line segments between $n$ vertices. Subtract $n$ sides to get only diagonals.</div>
+<table>
+  <tr><th>Polygon</th><th>$n$</th><th>Diagonals</th></tr>
+  <tr><td>Quadrilateral</td><td>4</td><td>2</td></tr>
+  <tr><td>Pentagon</td><td>5</td><td>5</td></tr>
+  <tr><td>Hexagon</td><td>6</td><td>9</td></tr>
+  <tr><td>Octagon</td><td>8</td><td>20</td></tr>
+</table>
+<div class="example">
+  <strong>Example:</strong> A polygon has 20 diagonals. Find the number of sides.<br>
+  $\dfrac{n(n-3)}{2} = 20 \Rightarrow n^2 - 3n - 40 = 0 \Rightarrow (n-8)(n+5) = 0 \Rightarrow n = \mathbf{8}$
+</div>
+
+<h3>Rank of a Word in Dictionary</h3>
+<ol>
+  <li>Arrange all letters alphabetically.</li>
+  <li>Count words starting with letters before the first letter of the given word.</li>
+  <li>Repeat for each subsequent position.</li>
+</ol>
+
+<h3>Derangement</h3>
+<p>No object in its original position:</p>
+<p>$$D_n = n!\sum_{k=0}^{n} \frac{(-1)^k}{k!}$$</p>
+
+<h3>Exponent of Prime $p$ in $n!$</h3>
+<p>$$E_p(n!) = \left\lfloor\frac{n}{p}\right\rfloor + \left\lfloor\frac{n}{p^2}\right\rfloor + \left\lfloor\frac{n}{p^3}\right\rfloor + \cdots$$</p>
+<div class="example">
+  <strong>Example:</strong> Trailing zeros in $100!$ = $E_5(100!) = 20 + 4 = \mathbf{24}$
+</div>
+
+
+<h2>Quick Formula Sheet</h2>
+<table>
+  <tr><th>Concept</th><th>Formula</th></tr>
+  <tr><td>Permutation</td><td>$n!/(n-r)!$</td></tr>
+  <tr><td>Combination</td><td>$n!/[r!(n-r)!]$</td></tr>
+  <tr><td>Circular</td><td>$(n-1)!$</td></tr>
+  <tr><td>Necklace</td><td>$(n-1)!/2$</td></tr>
+  <tr><td>Alike objects</td><td>$n!/(p!\,q!\,r!\cdots)$</td></tr>
+  <tr><td>Stars &amp; Bars</td><td>$^{n+r-1}C_{r-1}$</td></tr>
+  <tr><td>Subsets of $n$</td><td>$2^n$</td></tr>
+  <tr><td>Derangement</td><td>$n!\sum (-1)^k/k!$</td></tr>
+  <tr><td>Grid paths $(0,0)\to(m,n)$</td><td>$^{m+n}C_m$</td></tr>
+  <tr><td>Repetition allowed</td><td>$n^r$</td></tr>
+</table>
