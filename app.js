@@ -28,6 +28,7 @@ function goHome() {
   document.getElementById('content').classList.add('hidden');
   document.getElementById('chapter-nav').classList.add('hidden');
   document.getElementById('sidebar').classList.add('collapsed');
+  document.getElementById('sidebar-overlay').classList.remove('active');
   document.getElementById('chapter-list').innerHTML = '';
   document.getElementById('sidebar-subject').textContent = '';
   document.getElementById('breadcrumb').innerHTML = '';
@@ -38,7 +39,7 @@ async function loadSubject(subject) {
   const res = await fetch(`content/${subject}/index.json`);
   chapters = await res.json();
 
-  
+
   document.getElementById('sidebar-subject').textContent = subjectLabels[subject];
   const list = document.getElementById('chapter-list');
   list.innerHTML = '';
@@ -50,9 +51,12 @@ async function loadSubject(subject) {
   });
 
   document.getElementById('sidebar').classList.remove('collapsed');
+  if (window.innerWidth <= 768) {
+    document.getElementById('sidebar-overlay').classList.add('active');
+  }
   document.getElementById('home').classList.add('hidden');
 
-  
+
   if (chapters.length > 0) loadChapter(0);
 }
 
@@ -60,26 +64,26 @@ async function loadChapter(idx) {
   currentIdx = idx;
   const ch = chapters[idx];
 
-  
+
   document.querySelectorAll('#chapter-list li').forEach((li, i) => {
     li.classList.toggle('active', i === idx);
   });
 
-  
+
   document.getElementById('breadcrumb').innerHTML =
     `<span>${subjectLabels[currentSubject]}</span> &rsaquo; <span class="crumb-active">${ch.title}</span>`;
 
-  
+
   const res = await fetch(`content/${currentSubject}/${ch.file}`);
   const html = await res.text();
   const contentEl = document.getElementById('content');
   contentEl.innerHTML = html;
   contentEl.classList.remove('hidden');
 
-  
+
   renderMath();
 
-  
+
   const nav = document.getElementById('chapter-nav');
   nav.classList.remove('hidden');
   const btnPrev = document.getElementById('btn-prev');
@@ -87,7 +91,13 @@ async function loadChapter(idx) {
   btnPrev.disabled = idx === 0;
   btnNext.disabled = idx === chapters.length - 1;
 
-  
+
+  if (window.innerWidth <= 768) {
+    document.getElementById('sidebar').classList.add('collapsed');
+    document.getElementById('sidebar-overlay').classList.remove('active');
+  }
+
+
   window.scrollTo({ top: 0 });
 }
 
@@ -97,5 +107,11 @@ function navigateChapter(dir) {
 }
 
 function toggleSidebar() {
-  document.getElementById('sidebar').classList.toggle('collapsed');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+  sidebar.classList.toggle('collapsed');
+
+  if (window.innerWidth <= 768) {
+    overlay.classList.toggle('active', !sidebar.classList.contains('collapsed'));
+  }
 }

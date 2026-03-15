@@ -22,11 +22,16 @@
     <nav id="breadcrumb"></nav>
   </header>
 
+  <div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
   <div id="layout">
 
     
-    <aside id="sidebar">
-      <div id="sidebar-subject"></div>
+    <aside id="sidebar" class="collapsed">
+      <div id="sidebar-header">
+        <div id="sidebar-subject"></div>
+        <button id="sidebar-close" onclick="toggleSidebar()">&times;</button>
+      </div>
       <ul id="chapter-list"></ul>
     </aside>
 
