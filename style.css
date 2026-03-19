@@ -387,3 +387,58 @@ body {
 
 #sidebar::-webkit-scrollbar { width: 4px; }
 #sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+#content .toc {
+  display: inline-block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 24px 16px 16px;
+  margin: 0 0 32px 0;
+  min-width: 240px;
+  max-width: 100%;
+}
+
+#content .toc strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+#content .toc ol {
+  margin: 0;
+  padding-left: 18px;
+}
+
+#content .toc ul {
+  margin: 2px 0 4px;
+  padding-left: 16px;
+  list-style: disc;
+}
+
+#content .toc li {
+  margin-bottom: 3px;
+  font-size: 13.5px;
+}
+
+#content .toc a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+#content .toc a:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+/* ── chapter-intro subtitle ── */
+#content .chapter-intro {
+  color: var(--text-muted);
+  font-size: 14.5px;
+  margin-bottom: 24px;
+  margin-top: -8px;
+}

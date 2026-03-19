@@ -1,4 +1,5 @@
 [
+  { "title": "Basic Maths", "file": "basic-maths.html" },
   { "title": "Permutations & Combinations", "file": "permutations-and-combinations.html" },
   { "title": "Sequences & Series", "file": "sequences-and-series.html" }
 ]
